@@ -1,10 +1,10 @@
-# 🧠 Introduction to Deep Learning Structures
+# Introduction to Deep Learning Structures
 
 Deep learning models are built using layers of neurons that automatically learn representations from data. This guide introduces core structures commonly used in deep learning architectures.
 
 ---
 
-## 📚 1. Perceptron
+## 1. Perceptron
 
 - Simplest neural unit.
 - Takes weighted input, applies an activation function.
@@ -17,7 +17,7 @@ output = activation(w₁x₁ + w₂x₂ + ... + b)
 
 ---
 
-## 🧱 2. Feedforward Neural Network (FNN)
+## 2. Feedforward Neural Network (FNN)
 
 - Also called Multi-Layer Perceptron (MLP).
 - Data flows in one direction: input → hidden layers → output.
@@ -31,7 +31,7 @@ Input → [Hidden Layer(s)] → Output
 
 ---
 
-## 🔁 3. Convolutional Neural Network (CNN)
+## 3. Convolutional Neural Network (CNN)
 
 - Specializes in grid data like images.
 - Uses convolutional layers to extract local features.
@@ -50,7 +50,7 @@ Input → [Hidden Layer(s)] → Output
 
 ---
 
-## 🔄 4. Recurrent Neural Network (RNN)
+## 4. Recurrent Neural Network (RNN)
 
 - Processes sequences of data.
 - Output depends on current input and previous hidden state.
@@ -67,7 +67,7 @@ hₜ = f(Wxₜ + Uhₜ₋₁ + b)
 
 ---
 
-## 🧠 5. Long Short-Term Memory (LSTM)
+## 5. Long Short-Term Memory (LSTM)
 
 - A type of RNN with gates:
   - **Input gate**
@@ -77,7 +77,7 @@ hₜ = f(Wxₜ + Uhₜ₋₁ + b)
 
 ---
 
-## ⚡ 6. Transformer
+## 6. Transformer
 
 - Eliminates recurrence using **self-attention**.
 - Processes entire sequence in parallel.
@@ -96,7 +96,7 @@ hₜ = f(Wxₜ + Uhₜ₋₁ + b)
 
 ---
 
-## 🧮 7. Autoencoder
+## 7. Autoencoder
 
 - Unsupervised learning structure for compression.
 - Learns to encode and reconstruct input.
@@ -114,7 +114,7 @@ Input → Encoder → Bottleneck → Decoder → Output
 
 ---
 
-## 🔄 8. Generative Adversarial Network (GAN)
+## 8. Generative Adversarial Network (GAN)
 
 - Two networks:
   - **Generator** creates fake data.
@@ -129,7 +129,7 @@ Generator tries to fool the Discriminator.
 
 ---
 
-## 📈 9. Graph Neural Network (GNN)
+## 9. Graph Neural Network (GNN)
 
 - Operates on graph-structured data.
 - Nodes pass messages to neighbors to learn representations.
