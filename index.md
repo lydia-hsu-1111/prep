@@ -3,9 +3,9 @@ layout: default
 title: Home
 ---
 
-# Welcome to My Jekyll Site
+# Welcome to Data Science Prepping!
 
-This is the home page.
+Topics:
 
-- [About Page](about.html)
-- [Contact Page](contact.html)
+- [Deep Learning](about.html)
+
