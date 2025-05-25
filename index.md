@@ -3,9 +3,9 @@ layout: default
 title: Home
 ---
 
-# Welcome to Data Science Prepping!
+## Welcome to Data Science Prepping!
 
-Topics:
+# Topics:
 
 - [Deep Learning](deep_learning_structures.html)
 
