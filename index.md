@@ -7,5 +7,5 @@ title: Home
 
 Topics:
 
-- [Deep Learning](about.html)
+- [Deep Learning](deep_learning_structures.html)
 
