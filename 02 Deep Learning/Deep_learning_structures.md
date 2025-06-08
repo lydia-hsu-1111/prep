@@ -96,7 +96,7 @@ hₜ = f(Wxₜ + Uhₜ₋₁ + b)
 
 ---
 
-## 7. Autoencoder [implementation](./code/autoencode)
+## 7. Autoencoder 
 
 - Unsupervised learning structure for compression.
 - Learns to encode and reconstruct input.
@@ -111,6 +111,8 @@ Input → Encoder → Bottleneck → Decoder → Output
 
 - Denoising
 - Anomaly detection
+
+[implementation](./code/autoencoder)
 
 ---
 
