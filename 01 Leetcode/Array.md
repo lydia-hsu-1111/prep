@@ -168,6 +168,3 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 | Hashing        | 1, 217     | 128, 974  |
 | Greedy         | 455, 605   | 134, 406  |
 
----
-
-Feel free to comment out and add your own notes!
