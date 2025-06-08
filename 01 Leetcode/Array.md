@@ -156,7 +156,7 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 
 ---
 
-## 📌 Decision Table
+## Decision Table
 
 | Problem Type                         | Strategy                      |
 |-------------------------------------|-------------------------------|
@@ -172,7 +172,7 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 
 ---
 
-## 🚀 Tips to Recognize Patterns
+## Tips to Recognize Patterns
 
 1. **Fixed-size window?** Likely sliding window.
 2. **"Find k pairs" or similar?** Try heap or sorting + 2-pointers.
@@ -181,20 +181,5 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 5. **"What’s the smallest X that works?"** Binary Search on Answer.
 6. **"Maximum length of subarray ..."?** Try prefix sum with hash map.
 7. **Repeated steps from element to index (nums[nums[i]])?** Likely cycle detection.
-
----
-
-## ✅ Suggested Practice Order
-
-| Pattern         | Easy Start | Challenge |
-|----------------|------------|-----------|
-| Two Pointers   | 26, 283    | 42, 76    |
-| Sliding Window | 3, 209     | 76, 992   |
-| Prefix Sum     | 303, 724   | 560, 1248 |
-| Monotonic Stack| 496, 739   | 84, 42    |
-| Binary Search  | 704, 278   | 875, 1011 |
-| Hashing        | 1, 217     | 128, 974  |
-| Cycle Detect   | 141, 202   | 287       |
-| Greedy         | 455, 605   | 134, 406  |
 
 
