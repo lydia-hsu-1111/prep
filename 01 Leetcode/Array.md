@@ -52,7 +52,20 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 
 ---
 
-## 4. Monotonic Stack
+## 4. Three Pointers
+
+### When to Use
+- Problems involving **triplets** or sorted arrays (3Sum, sort colors)
+- Tracking **low**, **mid**, and **high** indices simultaneously
+
+### Examples
+- [3Sum (15)](https://leetcode.com/problems/3sum/)
+- [Sort Colors (75)](https://leetcode.com/problems/sort-colors/) — Dutch National Flag
+- [3Sum Closest (16)](https://leetcode.com/problems/3sum-closest/)
+
+---
+
+## 5. Monotonic Stack
 
 ### When to Use
 - Next Greater/Smaller Element
@@ -66,7 +79,20 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 
 ---
 
-## 5. Binary Search on Answer
+## 6. Cycle Detection (Floyd's Algorithm)
+
+### When to Use
+- Linked list or number sequence with repeated values
+- Detecting loops or duplicates where values point to indices
+
+### Examples
+- [Linked List Cycle (141)](https://leetcode.com/problems/linked-list-cycle/)
+- [Find the Duplicate Number (287)](https://leetcode.com/problems/find-the-duplicate-number/)
+- [Happy Number (202)](https://leetcode.com/problems/happy-number/)
+
+---
+
+## 7. Binary Search on Answer
 
 ### When to Use
 - Searching for a minimum/maximum possible value
@@ -79,7 +105,7 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 
 ---
 
-## 6. Hashing / Frequency Count
+## 8. Hashing / Frequency Count
 
 ### When to Use
 - Check for duplicates, counts, or frequency-based logic
@@ -92,7 +118,7 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 
 ---
 
-## 7. Greedy (Often with Sorting)
+## 9. Greedy (Often with Sorting)
 
 ### When to Use
 - Need optimal choice at every step
@@ -105,7 +131,7 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 
 ---
 
-## 8. In-Place Rearrangement
+## 10. In-Place Rearrangement
 
 ### When to Use
 - Modify array without using extra space
@@ -118,7 +144,7 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 
 ---
 
-## 9. Count + Math Patterns
+## 11. Count + Math Patterns
 
 ### When to Use
 - Count combinations, permutations, constraints-based counting
@@ -136,11 +162,12 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 |-------------------------------------|-------------------------------|
 | Longest substring with condition    | Sliding Window                |
 | Count subarrays with condition      | Prefix Sum + Hash Map         |
-| Sorted + Pair logic                 | Two Pointers                  |
+| Sorted + Pair logic                 | Two Pointers / Three Pointers |
 | Next Greater Element type           | Monotonic Stack               |
 | Optimize Min/Max under constraint   | Binary Search on Answer       |
+| Detect loops or repeats             | Cycle Detection (Floyd's)     |
 | Count or frequency logic            | Hash Map                      |
-| Modify array in-place               | Two Pointers or Swapping      |
+| Modify array in-place               | Two/Three Pointers or Swap    |
 | Need to explore all combos          | Backtracking / DFS            |
 
 ---
@@ -153,6 +180,7 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 4. **"Without extra space"?** Usually in-place with pointers.
 5. **"What’s the smallest X that works?"** Binary Search on Answer.
 6. **"Maximum length of subarray ..."?** Try prefix sum with hash map.
+7. **Repeated steps from element to index (nums[nums[i]])?** Likely cycle detection.
 
 ---
 
@@ -166,5 +194,7 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 | Monotonic Stack| 496, 739   | 84, 42    |
 | Binary Search  | 704, 278   | 875, 1011 |
 | Hashing        | 1, 217     | 128, 974  |
+| Cycle Detect   | 141, 202   | 287       |
 | Greedy         | 455, 605   | 134, 406  |
+
 
