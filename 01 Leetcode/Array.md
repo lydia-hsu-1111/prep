@@ -60,7 +60,7 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 
 ### Examples
 - [3Sum (15)](https://leetcode.com/problems/3sum/)
-- Sort Colors (75)(https://leetcode.com/problems/sort-colors/) — [Dutch National Flag](./code/Three pointer sorting.md)
+- Sort Colors (LC75) — [Dutch National Flag](./code/Three pointer sorting.md)
 - [3Sum Closest (16)](https://leetcode.com/problems/3sum-closest/)
 
 ---
