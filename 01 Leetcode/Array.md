@@ -46,9 +46,7 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 - Also supports 2D variants (matrix region sum)
 
 ### Examples
-- [Subarray Sum Equals K (560)](https://leetcode.com/problems/subarray-sum-equals-k/)
-- [Maximum Size Subarray Sum Equals k (325)](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/)
-- [Range Sum Query - Immutable (303)](https://leetcode.com/problems/range-sum-query-immutable/)
+- Subarray Sum Equals K (LC560)
 
 ---
 
@@ -59,9 +57,9 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 - Tracking **low**, **mid**, and **high** indices simultaneously
 
 ### Examples
-- [3Sum (15)](https://leetcode.com/problems/3sum/)
+- 3Sum (LC15)
+- 3Sum Closest (LC16)
 - Sort Colors (LC75) — [Dutch National Flag](./code/Three_pointer_sorting.md)
-- [3Sum Closest (16)](https://leetcode.com/problems/3sum-closest/)
 
 ---
 
