@@ -112,7 +112,7 @@ Input → Encoder → Bottleneck → Decoder → Output
 - Denoising
 - Anomaly detection
 
-[implementation](./code/autoencoder)
+[implementation](./code/autoencoder.md)
 
 ---
 
