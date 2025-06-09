@@ -121,9 +121,9 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 - Decisions depend only on current state
 
 ### Examples
-- [Jump Game (55)](https://leetcode.com/problems/jump-game/)
-- [Merge Intervals (56)](https://leetcode.com/problems/merge-intervals/)
-- [Non-overlapping Intervals (435)](https://leetcode.com/problems/non-overlapping-intervals/)
+- [Jump Game (LC55)](./code/Jump_game.md)
+- Merge Intervals (56)
+- Non-overlapping Intervals (435)
 
 ---
 
