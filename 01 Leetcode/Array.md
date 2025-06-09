@@ -97,10 +97,8 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 - “Can you … in X time/space?” => Try X using binary search
 
 ### Examples
-- [Koko Eating Bananas (875)](https://leetcode.com/problems/koko-eating-bananas/)
-- [Capacity To Ship Packages Within D Days (1011)](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
-- [Minimum Size Subarray Sum (209)](https://leetcode.com/problems/minimum-size-subarray-sum/) *(binary search + prefix sum)*
-
+- Koko Eating Bananas (LC875)
+- Capacity To Ship Packages Within D Days (LC1011)
 ---
 
 ## 8. Hashing / Frequency Count
