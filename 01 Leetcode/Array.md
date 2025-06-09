@@ -134,9 +134,8 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 - Problems involving rearranging numbers
 
 ### Examples
-- [Move Zeroes (283)](https://leetcode.com/problems/move-zeroes/)
-- [Sort Colors (75)](https://leetcode.com/problems/sort-colors/)
-- [First Missing Positive (41)](https://leetcode.com/problems/first-missing-positive/)
+- Move Zeroes (LC283)
+- [First Missing Positive (LC41)](./code/First_missing_positive)
 
 ---
 
