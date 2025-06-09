@@ -10,7 +10,7 @@ Mastering problems like LeetCode 795, 992, and 41 requires spotting patterns and
 - Are you **finding** max/min length?
 - Is the problem about **distinct elements**, **value ranges**, or **frequency**?
 
-🟢 Example:  
+### Example:  
 **Leetcode 795** → Count subarrays where max ∈ `[left, right]`.
 
 ---
@@ -23,7 +23,7 @@ Mastering problems like LeetCode 795, 992, and 41 requires spotting patterns and
 ### Use when:
 - Problem says **"exactly K"** distinct or odd or sum, etc.
   
-### 🔁 Common Problems:
+###  Common Problems:
 - Leetcode 992: Subarrays with Exactly K Distinct
 - Leetcode 1248: Count of Subarrays with Odd Numbers
 - Leetcode 930: Binary Subarrays with Sum
@@ -40,7 +40,7 @@ Use this when the subarray must follow a **value constraint** (like max ∈ `[le
 - Use a **sliding window** from last invalid point
 - Count all subarrays ending at current index
 
-### 🧪 Example: Leetcode 795
+### Example: Leetcode 795
 ```python
 def count(bound):
     res = 0
