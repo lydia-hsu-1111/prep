@@ -85,7 +85,7 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 
 ### Examples
 - [Linked List Cycle (141)](https://leetcode.com/problems/linked-list-cycle/)
-- [Find the Duplicate Number (287)](https://leetcode.com/problems/find-the-duplicate-number/)
+- [Find the Duplicate Number (287)](https://leetcode.com/problems/find-the-duplicate-number/) [Floyd_Tortoise_and_Hare](./code/Floyd_Tortoise_and_Hare.md)
 - [Happy Number (202)](https://leetcode.com/problems/happy-number/)
 
 ---
