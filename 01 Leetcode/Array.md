@@ -16,10 +16,9 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 - Fast/slow pointers
 
 ### Examples
-- [Two Sum II - Input Array Is Sorted (167)](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
-- [Remove Duplicates from Sorted Array (26)](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
-- [Squares of a Sorted Array (977)](https://leetcode.com/problems/squares-of-a-sorted-array/)
-
+- Two Sum II - Input Array Is Sorted (LC167)
+- Remove Duplicates from Sorted Array (LC26)
+- Squares of a Sorted Array (LC977)
 ---
 
 ## 2. Sliding Window
@@ -32,10 +31,9 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 - Move left/right pointers and maintain a window state (sum, count, set, map)
 
 ### Examples
-- [Longest Substring Without Repeating Characters (3)](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
-- [Maximum Average Subarray I (643)](https://leetcode.com/problems/maximum-average-subarray-i/)
-- [Minimum Size Subarray Sum (209)](https://leetcode.com/problems/minimum-size-subarray-sum/)
-
+- Longest Substring Without Repeating Characters (LC3)
+- Maximum Average Subarray I (LC643)
+- Minimum Size Subarray Sum (LC209)
 ---
 
 ## 3. Prefix Sum
@@ -71,9 +69,9 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 - Trapping water
 
 ### Examples
-- [Daily Temperatures (739)](https://leetcode.com/problems/daily-temperatures/)
-- [Largest Rectangle in Histogram (84)](https://leetcode.com/problems/largest-rectangle-in-histogram/)
-- [Trapping Rain Water (42)](https://leetcode.com/problems/trapping-rain-water/)
+- Daily Temperatures (LC739)
+- Largest Rectangle in Histogram (LC84)
+- Trapping Rain Water (LC42)
 
 ---
 
@@ -84,9 +82,10 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 - Detecting loops or duplicates where values point to indices
 
 ### Examples
-- [Linked List Cycle (141)](https://leetcode.com/problems/linked-list-cycle/)
-- Find the Duplicate Number (LC287) [Floyd_Tortoise_and_Hare](./code/Floyd_Tortoise_and_Hare.md) [Binary Search](./code/BS_cycle.md)
-- [Happy Number (202)](https://leetcode.com/problems/happy-number/)
+- [Linked List Cycle (LC141)
+- Find the Duplicate Number (LC287)
+-- SOLUTION I: [Floyd_Tortoise_and_Hare](./code/Floyd_Tortoise_and_Hare.md); SOLUTION II: [Binary Search](./code/BS_cycle.md)
+- Happy Number (LC202)
 
 ---
 
@@ -108,10 +107,9 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 - Often combined with sliding window
 
 ### Examples
-- [Two Sum (1)](https://leetcode.com/problems/two-sum/)
-- [Top K Frequent Elements (347)](https://leetcode.com/problems/top-k-frequent-elements/)
-- [Longest Consecutive Sequence (128)](https://leetcode.com/problems/longest-consecutive-sequence/)
-
+- Two Sum (LC1)
+- Top K Frequent Elements (LC347)
+- Longest Consecutive Sequence (LC128)
 ---
 
 ## 9. Greedy (Often with Sorting)
@@ -139,15 +137,15 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 
 ---
 
-## 11. Count + Math Patterns
+## 11. [Count + Math Patterns](./code/Count_math_pattern.md)
 
 ### When to Use
 - Count combinations, permutations, constraints-based counting
 - Often mixed with prefix sums or hash maps
 
 ### Examples
-- [Subarrays with K Different Integers (992)](https://leetcode.com/problems/subarrays-with-k-different-integers/)
-- [Number of Subarrays With Bounded Maximum (795)](https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/)
+- Subarrays with K Different Integers (LC992)
+- Number of Subarrays With Bounded Maximum (LC795)
 
 ---
 
