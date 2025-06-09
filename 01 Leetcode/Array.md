@@ -4,7 +4,7 @@ This is a comprehensive reference of array problem patterns on LeetCode, organiz
 
 ---
 
-## 1. Two Pointers
+## 1. [Two Pointers](./code/Two_pointer.md)
 
 ### When to Use
 - Sorted arrays or strings
