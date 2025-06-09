@@ -30,7 +30,7 @@
 * Lowest Common Ancestor of a BST (LC235) (leverages BST property which can be in-order related)
 * Inorder Successor in BST (LC285)
 
-### Post-order (Left → Right → Root)
+### [Post-order (Left → Right → Root)](./code/Post_order.md)
 * Maximum Depth of Binary Tree (LC104) (also post-order)
 * Balanced Binary Tree (LC110)
 * Diameter of Binary Tree (LC543)
