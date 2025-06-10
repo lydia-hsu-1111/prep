@@ -1,158 +1,89 @@
-# Introduction to Deep Learning Structures
+# Neural Network Architectures Overview
 
-Deep learning models are built using layers of neurons that automatically learn representations from data. This guide introduces core structures commonly used in deep learning architectures.
-
----
-
-## 1. Perceptron
-
-- Simplest neural unit.
-- Takes weighted input, applies an activation function.
-
-**Formula:**
-
-```
-output = activation(w₁x₁ + w₂x₂ + ... + b)
-```
+## 1. Feedforward Neural Network (FNN / MLP)
+- **Use Case**: Classification/regression on tabular data.
+- **Structure**: Fully connected layers (dense layers), no memory or recurrence.
+- **Example**: Predict housing prices, MNIST digit classification.
 
 ---
 
-## 2. Feedforward Neural Network (FNN)
-
-- Also called Multi-Layer Perceptron (MLP).
-- Data flows in one direction: input → hidden layers → output.
-- Common for structured data (e.g., tabular).
-
-**Diagram:**
-
-```
-Input → [Hidden Layer(s)] → Output
-```
-
----
-
-## 3. Convolutional Neural Network (CNN)
-
-- Specializes in grid data like images.
-- Uses convolutional layers to extract local features.
-
-**Typical Layers:**
-
-- Convolution
-- ReLU
-- Pooling (e.g., MaxPool)
-- Fully connected (FC)
-
-**Use Cases:**
-
-- Image classification
-- Object detection
+## 2. Convolutional Neural Network (CNN)
+- **Use Case**: Image, video, spatial data.
+- **Structure**: Uses convolutional layers to extract local patterns (edges, textures).
+- **Variants**:
+  - LeNet (early CNN)
+  - AlexNet (ImageNet breakthrough)
+  - VGG (deep but simple)
+  - ResNet (residual connections for very deep networks)
+  - Inception/GoogLeNet (multi-scale filters)
+- **Example**: Image classification, object detection.
 
 ---
 
-## 4. Recurrent Neural Network (RNN)
-
-- Processes sequences of data.
-- Output depends on current input and previous hidden state.
-
-**Equation:**
-
-```
-hₜ = f(Wxₜ + Uhₜ₋₁ + b)
-```
-
-**Limitation:**
-
-- Struggles with long-term dependencies.
+## 3. Recurrent Neural Network (RNN)
+- **Use Case**: Sequential data (text, time series).
+- **Structure**: Processes input sequentially with memory of previous steps.
+- **Variants**:
+  - Vanilla RNN (simple, suffers from vanishing gradients)
+  - LSTM (Long Short-Term Memory)
+  - GRU (Gated Recurrent Unit)
+- **Example**: Text generation, time-series forecasting.
 
 ---
 
-## 5. Long Short-Term Memory (LSTM)
-
-- A type of RNN with gates:
-  - **Input gate**
-  - **Forget gate**
-  - **Output gate**
-- Handles long-term dependencies better.
-
----
-
-## 6. Transformer
-
-- Eliminates recurrence using **self-attention**.
-- Processes entire sequence in parallel.
-- Backbone of models like BERT, GPT.
-
-**Components:**
-
-- Multi-head attention
-- Positional encoding
-- Feedforward layers
-
-**Advantages:**
-
-- Faster training
-- Captures global dependencies
+## 4. Transformer
+- **Use Case**: NLP, vision, audio, time-series.
+- **Structure**: Based entirely on self-attention; no recurrence or convolution.
+- **Variants**:
+  - BERT (encoder-only for understanding)
+  - GPT (decoder-only for generation)
+  - T5, BART (encoder-decoder for seq2seq)
+  - ViT (Vision Transformer)
+- **Example**: Chatbots, summarization, translation, image classification.
 
 ---
 
-## 7. [Autoencoder](./code/autoencoder.md)
-
-- Unsupervised learning structure for compression.
-- Learns to encode and reconstruct input.
-
-**Architecture:**
-
-```
-Input → Encoder → Bottleneck → Decoder → Output
-```
-
-**Use Cases:**
-
-- Denoising
-- Anomaly detection
+## 5. Autoencoder
+- **Use Case**: Dimensionality reduction, denoising, anomaly detection.
+- **Structure**: Encoder → bottleneck → decoder.
+- **Variants**:
+  - Denoising Autoencoder
+  - Variational Autoencoder (VAE) — probabilistic version.
+- **Example**: Reconstruct input, latent space learning.
 
 ---
 
-## 8. Generative Adversarial Network (GAN)
-
-- Two networks:
-  - **Generator** creates fake data.
-  - **Discriminator** distinguishes real from fake.
-- Compete in a zero-sum game.
-
-**Training Goal:**
-
-```
-Generator tries to fool the Discriminator.
-```
+## 6. Generative Adversarial Network (GAN)
+- **Use Case**: Generating new samples (images, text).
+- **Structure**: Generator vs. Discriminator (two networks in adversarial training).
+- **Variants**:
+  - DCGAN (convolutional GAN)
+  - CycleGAN (image-to-image translation)
+  - StyleGAN (photo-realistic face generation)
+- **Example**: Generate fake images, art synthesis.
 
 ---
 
-## 9. Graph Neural Network (GNN)
-
-- Operates on graph-structured data.
-- Nodes pass messages to neighbors to learn representations.
-
-**Applications:**
-
-- Social networks
-- Molecule classification
-- Recommendation systems
+## 7. Graph Neural Networks (GNN)
+- **Use Case**: Graph-structured data (social networks, molecules).
+- **Structure**: Learns over nodes, edges, and their relations.
+- **Variants**:
+  - GCN (Graph Convolutional Network)
+  - GAT (Graph Attention Network)
+- **Example**: Node classification, link prediction.
 
 ---
 
-## 🔚 Summary Table
-
-| Structure     | Use Case         | Key Feature             |
-|---------------|------------------|--------------------------|
-| MLP           | Tabular data     | Fully connected          |
-| CNN           | Image data       | Convolutions             |
-| RNN           | Sequences        | Recurrent states         |
-| LSTM          | Long sequences   | Memory cells             |
-| Transformer   | Language, vision | Self-attention           |
-| Autoencoder   | Compression      | Bottleneck layer         |
-| GAN           | Generation       | Adversarial training     |
-| GNN           | Graph data       | Message passing          |
+## 8. Attention Mechanisms
+- **Used in**:
+  - Transformers (self-attention)
+  - RNNs (sequence-to-sequence models with attention)
+  - Image models (visual attention)
+- **Purpose**: Allow model to focus on relevant parts of input.
 
 ---
+
+## Optional: Hybrid Architectures
+- CNN + RNN (e.g., for video)
+- Transformer + CNN (e.g., DETR for object detection)
+- RNN + Attention (e.g., translation)
