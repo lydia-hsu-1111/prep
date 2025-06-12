@@ -70,3 +70,39 @@ class Solution:
         res = dfs(amount)
         return res if res != float('inf') else -1
 ```
+4. Loud and Rich
+```python
+from collections import defaultdict
+
+class Solution:
+    def loudAndRich(self, richer: List[List[int]], quiet: List[int]) -> List[int]:
+        n = len(quiet)
+        graph = defaultdict(list)
+
+        # Build graph: edge a -> b if a is richer than b
+        for a, b in richer:
+            graph[b].append(a)
+
+        answer = [-1] * n
+
+        def dfs(i):
+            if answer[i] != -1:
+                return answer[i]
+            
+            min_quiet = quiet[i]
+            min_person = i
+
+            for nei in graph[i]:
+                cand = dfs(nei)
+                if quiet[cand] < min_quiet:
+                    min_quiet = quiet[cand]
+                    min_person = cand
+
+            answer[i] = min_person
+            return min_person
+
+        for i in range(n):
+            dfs(i)
+
+        return answer
+```
