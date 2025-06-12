@@ -106,3 +106,10 @@ class Solution:
 
         return answer
 ```
+Key steps:
+
+- Post-order DFS: first go deep, then make decisions on the way up.
+
+- Memoize the result per node so you don’t recompute.
+
+- Naturally handle multiple paths and cycles (if they existed, but they don't here).
