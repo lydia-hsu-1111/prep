@@ -113,3 +113,4 @@ Key steps:
 - Memoize the result per node so you don’t recompute.
 
 - Naturally handle multiple paths and cycles (if they existed, but they don't here).
+- Note: Don’t mix nonlocal mutable state and @lru_cache.
