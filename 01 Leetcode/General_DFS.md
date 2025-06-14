@@ -70,7 +70,35 @@ class Solution:
         res = dfs(amount)
         return res if res != float('inf') else -1
 ```
-4. Loud and Rich
+4. Loud and Rich (no memoization)
+```python
+from collections import defaultdict
+class Solution:
+    def loudAndRich(self, richer: List[List[int]], quiet: List[int]) -> List[int]:
+        n = len(quiet)
+        graph = defaultdict(list)
+        output = [0]*n
+        
+        for a, b in richer:
+            graph[b].append(a)
+
+        def dfs(i):
+            nonlocal quietest
+            nonlocal person
+            quietest = min(quietest, quiet[i])
+            if quietest == quiet[i]:
+                person = i
+            for neighbor in graph[i]:
+                dfs(neighbor)
+                
+        for i in range(n):
+            quietest = quiet[i]
+            person = i
+            dfs(i)
+            output[i] = person
+        return output
+```
+4. Loud and Rich (memoization)
 ```python
 from collections import defaultdict
 
@@ -78,41 +106,36 @@ class Solution:
     def loudAndRich(self, richer: List[List[int]], quiet: List[int]) -> List[int]:
         n = len(quiet)
         graph = defaultdict(list)
-
-        # Build graph: edge a -> b if a is richer than b
+        output = [0] * n
+        
         for a, b in richer:
             graph[b].append(a)
-
-        answer = [-1] * n
+        
+        memo = {}  # memo[i] = person with min quietness for person i
 
         def dfs(i):
-            if answer[i] != -1:
-                return answer[i]
-            
-            min_quiet = quiet[i]
-            min_person = i
+            if i in memo:
+                return memo[i]
 
-            for nei in graph[i]:
-                cand = dfs(nei)
-                if quiet[cand] < min_quiet:
-                    min_quiet = quiet[cand]
-                    min_person = cand
+            quietest = quiet[i]
+            person = i
 
-            answer[i] = min_person
-            return min_person
+            for neighbor in graph[i]:
+                cand = dfs(neighbor)
+                if quiet[cand] < quietest:
+                    quietest = quiet[cand]
+                    person = cand
+
+            memo[i] = person
+            return person
 
         for i in range(n):
-            dfs(i)
+            output[i] = dfs(i)
 
-        return answer
+        return output
 ```
-Key steps:
+Key notes:
 
-- Post-order DFS: first go deep, then make decisions on the way up.
-
-- Memoize the result per node so you don’t recompute.
-
-- Naturally handle multiple paths and cycles (if they existed, but they don't here).
-  
-- Note: Don’t mix nonlocal mutable state and @lru_cache.
+- Don’t mix nonlocal mutable state and @lru_cache.
+- 
   
