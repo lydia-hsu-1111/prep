@@ -137,5 +137,15 @@ class Solution:
 Key notes:
 
 - Don’t mix nonlocal mutable state and @lru_cache.
-- 
+- Even though the logic is correct in a clean tree without memoization, the graph is a DAG (Directed Acyclic Graph) — which means:
+
+    - Some nodes are visited multiple times from different people.
+
+    - Without memoization, the same subgraphs are re-traversed repeatedly.
+
+    - That can cause:
+
+        - Redundant work (inefficient).
+
+        - Incorrect results if a better (quieter) candidate exists in a previously traversed path.
   
