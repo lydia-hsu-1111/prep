@@ -135,3 +135,20 @@ def reverseList(head: ListNode) -> ListNode:
     
     return new_head
 ```
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        def dfs(pre, curr):
+            if not curr:
+                return pre
+            next_node = curr.next
+            curr.next = pre
+            new_head = dfs(curr, next_node)
+            return new_head
+        return dfs(None,head)
+```
