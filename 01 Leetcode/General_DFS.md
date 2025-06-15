@@ -148,4 +148,31 @@ Key notes:
         - Redundant work (inefficient).
 
         - Incorrect results if a better (quieter) candidate exists in a previously traversed path.
-  
+     
+  5. Shopping Offers (No specific data structure)
+  ```python
+  class Solution:
+    def shoppingOffers(self, price: List[int], special: List[List[int]], needs: List[int]) -> int:
+        from functools import lru_cache
+
+        n = len(price)
+
+        @lru_cache(None)
+        def dfs(remain):
+            # Base case: buy remaining items individually
+            min_cost = sum(remain[i] * price[i] for i in range(n))
+
+            # Try each special offer
+            for s in special:
+                new_remain = []
+                for i in range(n):
+                    if remain[i] < s[i]:
+                        break
+                    new_remain.append(remain[i] - s[i])
+                else:
+                    # All items in special are affordable
+                    min_cost = min(min_cost, dfs(tuple(new_remain)) + s[-1])
+            return min_cost
+
+        return dfs(tuple(needs))
+```
