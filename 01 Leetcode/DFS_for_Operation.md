@@ -114,6 +114,7 @@ def cloneGraph(node: 'Node') -> 'Node':
 ```
 
 ### Reverse Linked List
+1. reverse as it unwinds back up (classic recursive backtracking)
 ```python
 # Definition for singly-linked list.
 class ListNode:
@@ -135,6 +136,7 @@ def reverseList(head: ListNode) -> ListNode:
     
     return new_head
 ```
+2. reverse as it descends
 ```python
 # Definition for singly-linked list.
 # class ListNode:
