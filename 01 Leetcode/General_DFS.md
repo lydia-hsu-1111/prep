@@ -53,22 +53,26 @@ class Solution:
 ```python
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        coins.sort()
         
+        coins.sort()  # optional: can improve pruning in some variants
+
         from functools import lru_cache
         @lru_cache(None)
 
-        def dfs(amount):
-            if amount == 0:
+        def dfs(remain):
+            if remain == 0:
                 return 0
-            if amount < 0:
-                return float("inf")
-            if amount in coins:
-                return 1
-            return min([dfs(amount-c) for c in coins]) + 1
+            if remain < 0:
+                return float('inf')
+
+            min_coins = float('inf')
+            for coin in coins:
+                min_coins = min(min_coins, dfs(remain - coin) + 1)
+            return min_coins
 
         res = dfs(amount)
         return res if res != float('inf') else -1
+
 ```
 4. Loud and Rich (no memoization)
 ```python
@@ -154,11 +158,12 @@ Key notes:
   ```python
   class Solution:
     def shoppingOffers(self, price: List[int], special: List[List[int]], needs: List[int]) -> int:
-        from functools import lru_cache
-
+        
         n = len(price)
 
+        from functools import lru_cache
         @lru_cache(None)
+
         def dfs(remain):
             # Base case: buy remaining items individually
             min_cost = sum(remain[i] * price[i] for i in range(n))
