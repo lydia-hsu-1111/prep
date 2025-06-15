@@ -128,6 +128,43 @@ Key notes:
 
         - Incorrect results if a better (quieter) candidate exists in a previously traversed path.
      
+### Knapsack type of questions
+## Knapsack prototype
+```python
+# 0/1 Knapsack (Recursive with Memo)
+def knapsack_01(i, w):
+    if i == len(weights) or w == 0:
+        return 0
+    if (i, w) in memo:
+        return memo[(i, w)]
+
+    # Skip item
+    res = knapsack_01(i + 1, w)
+
+    # Take item if it fits
+    if weights[i] <= w:
+        res = max(res, values[i] + knapsack_01(i + 1, w - weights[i]))
+
+    memo[(i, w)] = res
+    return res
+```
+Note: You could write a backtracking function like this, but this explores all subsets explicitly, which is much slower.
+```python
+def dfs(i, w, path):
+    if w > capacity:
+        return
+    if i == len(weights):
+        valid_combinations.append((path[:], sum(values[j] for j in path)))
+        return
+    # Take item
+    path.append(i)
+    dfs(i + 1, w + weights[i], path)
+    path.pop()
+    # Skip item
+    dfs(i + 1, w, path)
+```
+
+
 
 4. Coin Change
 ```python
