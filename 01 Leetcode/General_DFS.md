@@ -129,7 +129,7 @@ Key notes:
         - Incorrect results if a better (quieter) candidate exists in a previously traversed path.
      
 ### Knapsack type of questions
-## Knapsack prototype
+#### Knapsack prototype
 ```python
 # 0/1 Knapsack (Recursive with Memo)
 def knapsack_01(i, w):
