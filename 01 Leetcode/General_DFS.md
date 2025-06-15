@@ -49,32 +49,7 @@ class Solution:
 
         return False
 ```
-3. Coin Change
-```python
-class Solution:
-    def coinChange(self, coins: List[int], amount: int) -> int:
-        
-        coins.sort()  # optional: can improve pruning in some variants
-
-        from functools import lru_cache
-        @lru_cache(None)
-
-        def dfs(remain):
-            if remain == 0:
-                return 0
-            if remain < 0:
-                return float('inf')
-
-            min_coins = float('inf')
-            for coin in coins:
-                min_coins = min(min_coins, dfs(remain - coin) + 1)
-            return min_coins
-
-        res = dfs(amount)
-        return res if res != float('inf') else -1
-
-```
-4. Loud and Rich (no memoization)
+3. Loud and Rich (no memoization)
 ```python
 from collections import defaultdict
 class Solution:
@@ -102,7 +77,7 @@ class Solution:
             output[i] = person
         return output
 ```
-4. Loud and Rich (memoization)
+3. Loud and Rich (memoization)
 ```python
 from collections import defaultdict
 
@@ -154,6 +129,31 @@ Key notes:
         - Incorrect results if a better (quieter) candidate exists in a previously traversed path.
      
 
+4. Coin Change
+```python
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        
+        coins.sort()  # optional: can improve pruning in some variants
+
+        from functools import lru_cache
+        @lru_cache(None)
+
+        def dfs(remain):
+            if remain == 0:
+                return 0
+            if remain < 0:
+                return float('inf')
+
+            min_coins = float('inf')
+            for coin in coins:
+                min_coins = min(min_coins, dfs(remain - coin) + 1)
+            return min_coins
+
+        res = dfs(amount)
+        return res if res != float('inf') else -1
+
+```
 5. Shopping Offers (no specific data structure)
   ```python
   class Solution:
