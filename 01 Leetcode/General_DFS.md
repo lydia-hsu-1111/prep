@@ -150,7 +150,7 @@ Key notes:
         - Incorrect results if a better (quieter) candidate exists in a previously traversed path.
      
 
-5. Shopping Offers (No specific data structure)
+5. Shopping Offers (no specific data structure)
   ```python
   class Solution:
     def shoppingOffers(self, price: List[int], special: List[List[int]], needs: List[int]) -> int:
