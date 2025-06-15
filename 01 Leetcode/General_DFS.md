@@ -128,7 +128,7 @@ Key notes:
 
         - Incorrect results if a better (quieter) candidate exists in a previously traversed path.
      
-### Knapsack type of questions
+### Knapsack type of questions - crossing the bridge between DFS and DP
 #### Knapsack prototype
 ```python
 # 0/1 Knapsack (Recursive with Memo)
@@ -191,7 +191,7 @@ class Solution:
         return res if res != float('inf') else -1
 
 ```
-5. Shopping Offers (no specific data structure)
+5. Shopping Offers 
   ```python
   class Solution:
     def shoppingOffers(self, price: List[int], special: List[List[int]], needs: List[int]) -> int:
