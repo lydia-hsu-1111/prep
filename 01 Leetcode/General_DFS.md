@@ -127,6 +127,7 @@ Key notes:
         - Redundant work (inefficient).
 
         - Incorrect results if a better (quieter) candidate exists in a previously traversed path.
+- Global or nonlocal variables for values are not needed when each recursive call returns its own values.
      
 ### Knapsack type of questions - crossing the bridge between DFS and DP
 #### Knapsack prototype
