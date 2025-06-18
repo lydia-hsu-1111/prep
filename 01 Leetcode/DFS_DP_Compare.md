@@ -2,7 +2,6 @@
 
 ### Top-down DFS + Memoization
 
-Idea:
 - Use two pointers, left and right.
 - If s[left] == s[right], then the answer includes these two chars + answer for substring inside (left+1, right-1).
 - Else, skip either left or right char and take max.
