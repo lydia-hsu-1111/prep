@@ -101,67 +101,7 @@ def topoSort(n, edges):
     return res if len(res) == n else []
 ```
 
-## 8. Union-Find (DSU)
-```python
-def find(parent, x):
-    if parent[x] != x:
-        parent[x] = find(parent, parent[x])
-    return parent[x]
-
-def union(parent, rank, x, y):
-    rootX, rootY = find(parent, x), find(parent, y)
-    if rootX != rootY:
-        if rank[rootX] > rank[rootY]:
-            parent[rootY] = rootX
-        elif rank[rootX] < rank[rootY]:
-            parent[rootX] = rootY
-        else:
-            parent[rootY] = rootX
-            rank[rootX] += 1
-```
-
-## 9. Trie (Prefix Tree)
-```python
-class TrieNode:
-    def __init__(self):
-        self.children = {}
-        self.is_end = False
-
-class Trie:
-    def __init__(self):
-        self.root = TrieNode()
-
-    def insert(self, word):
-        node = self.root
-        for char in word:
-            if char not in node.children:
-                node.children[char] = TrieNode()
-            node = node.children[char]
-        node.is_end = True
-
-    def search(self, word):
-        node = self.root
-        for char in word:
-            if char not in node.children:
-                return False
-            node = node.children[char]
-        return node.is_end
-```
-
-## 10. Bitmask DP
-```python
-def countSubsets(nums):
-    n = len(nums)
-    dp = [0] * (1 << n)
-    for mask in range(1 << n):
-        for i in range(n):
-            if mask & (1 << i):
-                dp[mask] = dp[mask ^ (1 << i)] + nums[i]
-                break
-    return dp
-```
-
-## 11. Reservoir Sampling
+## 8. Reservoir Sampling
 ```python
 import random
 
@@ -177,7 +117,7 @@ def reservoir_sample(iterator, k):
     return reservoir
 ```
 
-## 12. Moore's Voting Algorithm
+## 9. Moore's Voting Algorithm
 ```python
 def majorityElement(nums):
     count = 0
@@ -189,7 +129,7 @@ def majorityElement(nums):
     return candidate
 ```
 
-## 13. Sweep Line / Event Sorting
+## 10. Sweep Line / Event Sorting
 ```python
 def minMeetingRooms(intervals):
     starts = sorted([i[0] for i in intervals])
@@ -205,43 +145,7 @@ def minMeetingRooms(intervals):
     return rooms
 ```
 
-## 14. Segment Tree (Sum Query)
-```python
-class SegmentTree:
-    def __init__(self, nums):
-        n = len(nums)
-        self.tree = [0] * (2 * n)
-        for i in range(n):
-            self.tree[n + i] = nums[i]
-        for i in range(n - 1, 0, -1):
-            self.tree[i] = self.tree[2 * i] + self.tree[2 * i + 1]
-
-    def update(self, index, value):
-        n = len(self.tree) // 2
-        i = index + n
-        self.tree[i] = value
-        while i > 1:
-            i //= 2
-            self.tree[i] = self.tree[2 * i] + self.tree[2 * i + 1]
-
-    def query(self, l, r):
-        n = len(self.tree) // 2
-        l += n
-        r += n
-        res = 0
-        while l < r:
-            if l % 2:
-                res += self.tree[l]
-                l += 1
-            if r % 2:
-                r -= 1
-                res += self.tree[r]
-            l //= 2
-            r //= 2
-        return res
-```
-
-## 15. Kadane's Algorithm
+## 11. Kadane's Algorithm
 ```python
 def maxSubArray(nums):
     max_sum = curr = nums[0]
@@ -251,7 +155,7 @@ def maxSubArray(nums):
     return max_sum
 ```
 
-## 16. Manacher's Algorithm
+## 12. Manacher's Algorithm
 ```python
 def manachers(s):
     A = '@#' + '#'.join(s) + '#$'
@@ -267,7 +171,7 @@ def manachers(s):
     return max(Z)
 ```
 
-## 17. Dijkstra's Algorithm (Shortest Path)
+## 13. Dijkstra's Algorithm (Shortest Path)
 ```python
 import heapq
 from collections import defaultdict
