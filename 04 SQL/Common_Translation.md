@@ -1,4 +1,4 @@
-| 🔑 Keyword in Question            | 🛠 SQL Tool / Pattern                                                              |
+| Keyword in Question               | SQL Tool / Pattern                                                              |
 | --------------------------------- | ---------------------------------------------------------------------------------- |
 | **“More than one”**               | `GROUP BY col HAVING COUNT(*) > 1`                                                 |
 | **“Exactly one / unique”**        | `GROUP BY col HAVING COUNT(*) = 1`                                                 |
