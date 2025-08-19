@@ -1,0 +1,22 @@
+| **Category**                  | **Task**                      | **Function / Syntax**                                                                          | **Example**        | **Output**           |
+| ----------------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------- | ------------------ | -------------------- |
+| **Extract Numbers**           | First number in string        | `REGEXP_SUBSTR(str,'[0-9]+')`                                                                  | `'abc123def'`      | `'123'`              |
+|                               | All numbers (comma-separated) | `REGEXP_REPLACE(str,'[^0-9]+',',')`                                                            | `'a1b2c3'`         | `'1,2,3'`            |
+|                               | Integer part of decimal       | `REGEXP_SUBSTR('Price: 45.67','[0-9]+')`                                                       | `'45.67'`          | `'45'`               |
+| **Extract Letters**           | First letter sequence         | `REGEXP_SUBSTR(str,'[A-Za-z]+')`                                                               | `'123abc456'`      | `'abc'`              |
+|                               | Remove digits                 | `REGEXP_REPLACE(str,'[0-9]','')`                                                               | `'a1b2c3'`         | `'abc'`              |
+|                               | Remove letters                | `REGEXP_REPLACE(str,'[A-Za-z]','')`                                                            | `'a1b2c3'`         | `'123'`              |
+| **Extract Emails / Patterns** | Extract email                 | `REGEXP_SUBSTR(str,'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}')`                          | `'Email: a@b.com'` | `'a@b.com'`          |
+|                               | Validate email                | `str REGEXP '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'`                                | `'a@b.com'`        | `1` (TRUE)           |
+| **Extract Dates**             | `YYYY-MM-DD`                  | `REGEXP_SUBSTR(str,'[0-9]{4}-[0-9]{2}-[0-9]{2}')`                                              | `'2025-08-19'`     | `'2025-08-19'`       |
+|                               | `MM/DD/YYYY`                  | `REGEXP_SUBSTR(str,'[0-9]{2}/[0-9]{2}/[0-9]{4}')`                                              | `'08/19/2025'`     | `'08/19/2025'`       |
+| **Split Strings / Tokens**    | Split CSV string into table   | `JSON_TABLE(CONCAT('["',REPLACE(str,',','","'),'"]'),'$[*]' COLUMNS(x VARCHAR(100) PATH '$'))` | `'a,b,c'`          | Table: `'a','b','c'` |
+|                               | Extract Nth token             | `REGEXP_SUBSTR(str,'[^,]+',1,N)`                                                               | `'a,b,c',3`        | `'c'`                |
+| **Count / Conditional Regex** | Count digits                  | `LENGTH(REGEXP_REPLACE(str,'[^0-9]',''))`                                                      | `'a1b2c3'`         | `3`                  |
+|                               | Count letters                 | `LENGTH(REGEXP_REPLACE(str,'[^A-Za-z]',''))`                                                   | `'a1b2c3'`         | `3`                  |
+|                               | Count matches of pattern      | `REGEXP_COUNT(str,'[0-9]')`                                                                    | `'a1b2c3'`         | `3`                  |
+| **String Functions**          | Concatenate                   | `CONCAT(str1,str2)`                                                                            | `'a','b'`          | `'ab'`               |
+|                               | Substring                     | `SUBSTRING(str,pos,len)`                                                                       | `'abc',2,2`        | `'bc'`               |
+|                               | String length                 | `LENGTH(str)`                                                                                  | `'abc'`            | `3`                  |
+|                               | Trim spaces                   | `TRIM(str)`                                                                                    | `' abc '`          | `'abc'`              |
+|                               | Replace substring             | `REPLACE(str,'old','new')`                                                                     | `'a1b1c','1','X'`  | `'aXbXc'`            |
